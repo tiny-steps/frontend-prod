@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:prod": "vite build --config vite.config.prod.js",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:build": "docker build -t tiny-steps-frontend-prod .",
+    "docker:run": "docker run -p 80:80 tiny-steps-frontend-prod"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",

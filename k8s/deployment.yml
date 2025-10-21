@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ts-react-client
+  labels:
+    app: ts-react-client
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ts-react-client
+  template:
+    metadata:
+      labels:
+        app: ts-react-client
+    spec:
+      containers:
+      - name: ts-react-client
+        image: tinystepsd3v/ts-react-client:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        env:
+        - name: NODE_ENV
+          value: "production"
+        - name: VITE_APP_DOMAIN
+          value: "tinystepscdc.com"
