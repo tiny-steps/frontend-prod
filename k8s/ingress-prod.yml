@@ -11,20 +11,9 @@ spec:
   tls:
   - hosts:
     - tinystepscdc.com
-    - www.tinystepscdc.com
     secretName: ts-frontend-prod-tls
   rules:
   - host: tinystepscdc.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: ts-frontend-prod-service
-            port:
-              number: 80
-  - host: www.tinystepscdc.com
     http:
       paths:
       - path: /
