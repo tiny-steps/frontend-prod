@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ts-react-client-service
+  name: ts-frontend-prod-service
   labels:
-    app: ts-react-client
+    app: ts-frontend-prod
 spec:
   selector:
-    app: ts-react-client
+    app: ts-frontend-prod
   ports:
   - protocol: TCP
     port: 80

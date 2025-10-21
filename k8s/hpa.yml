@@ -1,12 +1,12 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: ts-react-client-hpa
+  name: ts-frontend-prod-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: ts-react-client
+    name: ts-frontend-prod
   minReplicas: 2
   maxReplicas: 10
   metrics:

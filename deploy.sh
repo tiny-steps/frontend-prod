@@ -19,12 +19,12 @@ fi
 
 # Build Docker image
 echo "🐳 Building Docker image..."
-docker build -t tinystepsd3v/ts-react-client:latest .
+docker build -t tinystepsd3v/ts-frontend-prod:latest .
 
 # Push to Docker Hub (if logged in)
 if docker info | grep -q "Username: tinystepsd3v"; then
     echo "📤 Pushing to Docker Hub..."
-    docker push tinystepsd3v/ts-react-client:latest
+    docker push tinystepsd3v/ts-frontend-prod:latest
 else
     echo "⚠️  Not logged into Docker Hub. Please run 'docker login' first."
 fi
@@ -42,20 +42,34 @@ kubectl apply -f k8s/hpa.yml
 if [ "$1" = "--prod" ]; then
     echo "🌐 Deploying to production (tinystepscdc.com)..."
     kubectl apply -f k8s/ingress-prod.yml
-    kubectl set image deployment/ts-react-client ts-react-client=tinystepsd3v/ts-react-client:latest
-    kubectl rollout status deployment/ts-react-client
+    kubectl set image deployment/ts-frontend-prod ts-frontend-prod=tinystepsd3v/ts-frontend-prod:latest
+    kubectl rollout status deployment/ts-frontend-prod
     echo "✅ Production deployment completed!"
     echo "🔗 Application will be available at: https://tinystepscdc.com"
 elif [ "$1" = "--dev" ]; then
     echo "🧪 Deploying to development (dev.tinystepscdc.com)..."
     kubectl apply -f k8s/ingress-dev.yml
-    kubectl set image deployment/ts-react-client ts-react-client=tinystepsd3v/ts-react-client:latest
-    kubectl rollout status deployment/ts-react-client
+    kubectl set image deployment/ts-frontend-prod ts-frontend-prod=tinystepsd3v/ts-frontend-prod:latest
+    kubectl rollout status deployment/ts-frontend-prod
     echo "✅ Development deployment completed!"
     echo "🔗 Application will be available at: https://dev.tinystepscdc.com"
+elif [ "$1" = "--logs" ]; then
+    echo "📋 Checking deployment logs and status..."
+    echo "=== Pod Status ==="
+    kubectl get pods -l app=ts-frontend-prod
+    echo "=== Service Status ==="
+    kubectl get svc ts-frontend-prod-service
+    echo "=== Ingress Status ==="
+    kubectl get ingress
+    echo "=== Pod Logs ==="
+    kubectl logs -l app=ts-frontend-prod --tail=50
+    echo "=== Describe Pod ==="
+    kubectl describe pods -l app=ts-frontend-prod
+    echo "=== Events ==="
+    kubectl get events --sort-by='.lastTimestamp'
 else
     echo "📋 Kubernetes configurations applied!"
-    echo "💡 Use --prod for production or --dev for development deployment"
+    echo "💡 Use --prod for production, --dev for development, or --logs for troubleshooting"
     echo "🔗 Production: https://tinystepscdc.com"
     echo "🔗 Development: https://dev.tinystepscdc.com"
 fi

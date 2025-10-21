@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ts-react-client-ingress-dev
+  name: ts-frontend-prod-ingress-dev
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-staging"
@@ -17,7 +17,7 @@ spec:
   tls:
   - hosts:
     - dev.tinystepscdc.com
-    secretName: ts-react-client-tls-dev
+    secretName: ts-frontend-prod-tls-dev
   rules:
   - host: dev.tinystepscdc.com
     http:
@@ -26,6 +26,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: ts-react-client-service
+            name: ts-frontend-prod-service
             port:
               number: 80

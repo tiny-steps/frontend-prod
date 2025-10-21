@@ -8,7 +8,7 @@ on:
 
 env:
   DOCKERHUB_USERNAME: tinystepsd3v
-  IMAGE_NAME: ts-react-client
+  IMAGE_NAME: ts-frontend-prod
 
 jobs:
   build:
@@ -62,8 +62,21 @@ jobs:
           kubectl apply -f k8s/deployment.yml
           kubectl apply -f k8s/service.yml
           kubectl apply -f k8s/ingress-dev.yml
-          kubectl set image deployment/ts-react-client ts-react-client=${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ needs.build.outputs.IMAGE_TAG }}
-          kubectl rollout status deployment/ts-react-client
+          kubectl set image deployment/ts-frontend-prod ts-frontend-prod=${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ needs.build.outputs.IMAGE_TAG }}
+          kubectl rollout status deployment/ts-frontend-prod
+          
+      - name: Verify Development Deployment
+        run: |
+          echo "=== Pod Status ==="
+          kubectl get pods -l app=ts-frontend-prod
+          echo "=== Service Status ==="
+          kubectl get svc ts-frontend-prod-service
+          echo "=== Ingress Status ==="
+          kubectl get ingress ts-frontend-prod-ingress-dev
+          echo "=== Pod Logs ==="
+          kubectl logs -l app=ts-frontend-prod --tail=50
+          echo "=== Describe Pod ==="
+          kubectl describe pods -l app=ts-frontend-prod
 
   deploy-prod:
     needs: build
@@ -91,5 +104,18 @@ jobs:
           kubectl apply -f k8s/deployment.yml
           kubectl apply -f k8s/service.yml
           kubectl apply -f k8s/ingress-prod.yml
-          kubectl set image deployment/ts-react-client ts-react-client=${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ needs.build.outputs.IMAGE_TAG }}
-          kubectl rollout status deployment/ts-react-client
+          kubectl set image deployment/ts-frontend-prod ts-frontend-prod=${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ needs.build.outputs.IMAGE_TAG }}
+          kubectl rollout status deployment/ts-frontend-prod
+          
+      - name: Verify Deployment
+        run: |
+          echo "=== Pod Status ==="
+          kubectl get pods -l app=ts-frontend-prod
+          echo "=== Service Status ==="
+          kubectl get svc ts-frontend-prod-service
+          echo "=== Ingress Status ==="
+          kubectl get ingress ts-frontend-prod-ingress-prod
+          echo "=== Pod Logs ==="
+          kubectl logs -l app=ts-frontend-prod --tail=50
+          echo "=== Describe Pod ==="
+          kubectl describe pods -l app=ts-frontend-prod

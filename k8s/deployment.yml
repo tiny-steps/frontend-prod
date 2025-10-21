@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ts-react-client
+  name: ts-frontend-prod
   labels:
-    app: ts-react-client
+    app: ts-frontend-prod
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: ts-react-client
+      app: ts-frontend-prod
   template:
     metadata:
       labels:
-        app: ts-react-client
+        app: ts-frontend-prod
     spec:
       containers:
-      - name: ts-react-client
-        image: tinystepsd3v/ts-react-client:latest
+      - name: ts-frontend-prod
+        image: tinystepsd3v/ts-frontend-prod:latest
         ports:
         - containerPort: 80
         resources:
