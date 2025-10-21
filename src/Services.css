@@ -1,0 +1,156 @@
+.therapies-section {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.therapies-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #b40284;
+}
+.heding {
+  font-size: 32px;
+  /* font-style: normal; */
+  font-weight: 700;
+
+  color: #420257;
+  margin-top: -10px;
+}
+
+.therapies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.therapy-card {
+  background: #f6edfb;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.therapy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.therapy-card.active-card {
+  border: 2px solid violet;
+  box-shadow: 0 0 15px rgba(148, 0, 211, 0.4);
+  border-radius: 12px;
+}
+
+.therapy-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.therapy-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #222;
+  text-align: left;
+}
+
+.therapy-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.know-more {
+  text-decoration: none;
+  font-weight: bold;
+  color: #610692;
+  transition: color 0.2s;
+}
+
+.know-more:hover {
+  color: #ff00b7;
+}
+.applied-card {
+  background-color: #f3e8ff;
+}
+
+.aqua-card {
+  background-color: #e0f7fa;
+}
+
+.behavioral-card {
+  background-color: #fff3e0;
+}
+
+.group-card {
+  background-color: #e8f5e9;
+}
+
+.language-card {
+  background-color: #fce4ec;
+}
+
+.music-card {
+  background-color: #ede7f6;
+}
+
+.occupational-card {
+  background-color: #f1f8e9;
+}
+
+.physio-card {
+  background-color: #e3f2fd;
+}
+
+.special-card {
+  background-color: #f9fbe7;
+}
+
+.speech-card {
+  background-color: #fce4ec;
+}
+
+.sensory-card {
+  background-color: #f3f3f3;
+}
+.asdscreening-card {
+  background-color: #ccfcf5;
+}
+.diagnosis-card {
+  background-color: #d7d3f8;
+}
+.academic-card {
+  background-color: #ddf7d4;
+}
+.development-card {
+  background-color: #f9cdf0;
+}
+.after-card {
+  background-color: #f7f6cc;
+}
+.iq-card {
+  background-color: #dabff7;
+}
+.early-card {
+  background-color: #edfcc5;
+}
+.online-card {
+  background-color: #fef0e8;
+}
+.school-card {
+  background-color: #f9d7de;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .therapies-title {
+    font-size: 1.6rem;
+  }
+  .therapy-card {
+    padding: 20px;
+  }
+}

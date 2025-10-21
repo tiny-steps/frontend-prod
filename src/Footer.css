@@ -1,0 +1,378 @@
+.footer {
+  background-color: #75059e;
+  color: #000;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+/* Logo Section */
+.footer-logo {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  margin-top: 30px;
+}
+
+.logo-circle {
+  width: 140px;
+  height: 140px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.logo-circle img {
+  width: 86%;
+  height: auto;
+  margin-left: 20px;
+  padding-top: 14px;
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+}
+.round {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+
+  line-height: 1.6;
+  margin: 10px auto;
+  white-space: normal;
+}
+
+.rou1 {
+  color: #fffdfe;
+}
+.rou2 {
+  color: #ffffff;
+}
+.rou3 {
+  color: #ffffff;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  background: #1c1208;
+  color: white;
+  font-size: 16px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #ff0090;
+}
+
+/* Services Section */
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 0;
+}
+
+.footer-section h3 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #fff;
+  /* margin-top: -px; */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.footer-section ul li {
+  margin-bottom: 15px;
+  height: 15px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #edeaea;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-section ul li a:hover {
+  color: #fd139b;
+}
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.service-icon {
+  margin-right: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Clinic Section */
+.clinic-wrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  min-width: 280px;
+  margin-top: 60px;
+  padding: 0 16px;
+}
+
+.clinic-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+.clinic-image {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.clinic-info-card {
+  position: relative;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.clinic-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 9px;
+}
+
+.clinic-link {
+  color: #ff22c4;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.clinic-link:hover {
+  text-decoration: underline;
+}
+
+.clinic-details {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+}
+
+.clinic-details p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.clinic-details .iconn {
+  font-size: 17px;
+  color: #81018a;
+  margin-bottom: 2px;
+}
+
+.footer {
+  background: #6a0dad;
+  padding: 40px 20px 80px;
+  position: relative;
+}
+
+.footer-bottom {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 15px 15px;
+  font-size: 14px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  text-align: center;
+}
+
+.footer-left {
+  flex: 1;
+  text-align: left;
+  font-size: 14px;
+  display: inline-flex; /* keep items in one row */
+  align-items: center;
+  gap: 8px; /* spacing between links and | */
+  white-space: nowrap;
+}
+
+.footer-center {
+  flex: 6;
+  text-align: center;
+  margin-right: 150px;
+}
+
+.footer-left a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 6px;
+  white-space: nowrap;
+}
+
+.footer-left a:hover {
+  text-decoration: none;
+  color: #da06e9;
+}
+
+@media (max-width: 1200px) {
+  .footer-bottom {
+    flex-direction: column;
+    padding: 5px 10px 25px;
+    gap: 6px;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-center {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    padding: 12px 10px 80px;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-center {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+  .footer-center p {
+    font-size: 13px;
+  }
+}
+
+.clinic-info-card {
+  width: 95%;
+  padding: 15px;
+}
+
+@media (max-width: 480px) {
+  .logo-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-circle img {
+    width: 86%;
+    height: auto;
+    margin-left: 17px;
+    padding-top: 14px;
+    margin-bottom: 6px;
+    padding-bottom: 2px;
+  }
+
+  .clinic-info-card {
+    padding: 12px;
+  }
+
+  .clinic-title {
+    font-size: 15px;
+  }
+}
+@media (max-width: 300px) {
+  .clinic-details .icon {
+    font-size: 15px;
+    margin-right: 6px;
+  }
+  .clinical-wrapper {
+    margin-top: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clinic-info-card {
+    padding: 24px;
+  }
+
+  .clinic-title {
+    font-size: 1.25rem;
+  }
+
+  .clinic-details {
+    font-size: 1rem;
+  }
+  .clinic-wrapper {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 480px) {
+  .clinic-wrapper {
+    margin-bottom: 80px;
+  }
+}

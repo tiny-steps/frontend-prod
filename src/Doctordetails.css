@@ -1,0 +1,204 @@
+.expert-section {
+  padding: 60px 40px;
+  margin: 40px auto;
+  background-color: #f4effd;
+  text-align: center;
+  max-width: 1400px;
+  box-sizing: border-box;
+}
+
+.expert-section h2 {
+  font-size: 32px;
+  color: #410168;
+  margin-bottom: 10px;
+}
+
+.expert-section p {
+  font-size: 18px;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  color: #0c0b0b;
+  font-weight: 400;
+}
+
+.expert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.expert-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.expert-card:hover {
+  transform: translateY(-5px);
+}
+
+.expert-image {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.expert-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ce035e;
+}
+
+.linkedin-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #a68ee3;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.expert-card h3 {
+  font-size: 18px;
+  color: #530263;
+  margin: 10px 0 5px;
+}
+
+.expert-card h4 {
+  font-size: 16px;
+  color: #0c0a0a;
+  margin-bottom: 8px;
+}
+
+.expert-card p {
+  font-size: 13px;
+  color: #0c0b0b;
+}
+
+.seven-step-section {
+  background-color: #ffffff;
+  padding: 60px 40px;
+  margin: 40px auto;
+  font-family: "Segoe UI", sans-serif;
+  max-width: 1400px;
+  box-sizing: border-box;
+}
+
+.seven-step-section h2 {
+  color: #780398;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 40px;
+  max-width: 800px;
+}
+
+.step-list li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #64016b;
+  line-height: 0.1;
+}
+
+.step-list .emoji {
+  font-size: 24px;
+  margin-right: 16px;
+  padding-top: 17px;
+  flex-shrink: 0;
+}
+
+.bottom-message {
+  font-size: 18px;
+  font-weight: 500;
+  color: #390155;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bottom-message strong {
+  font-weight: 700;
+  color: #444;
+}
+.benefit-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: #be0483;
+}
+@media (max-width: 1024px) {
+  .expert-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .expert-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .expert-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .seven-step-section h2 {
+    font-size: 24px;
+  }
+
+  .step-list li {
+    font-size: 16px;
+  }
+
+  .bottom-message {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seven-step-section {
+    padding: 40px 15px;
+  }
+
+  .seven-step-section h2 {
+    font-size: 20px;
+  }
+
+  .step-list li {
+    font-size: 14px;
+  }
+
+  .bottom-message {
+    font-size: 14px;
+  }
+}

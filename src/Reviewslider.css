@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews-section {
+  padding: 60px 40px;
+  margin: 40px auto;
+  text-align: center;
+  background: #ffffff;
+  max-width: 1400px;
+  box-sizing: border-box;
+}
+
+.reviews-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #470254;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: stretch;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ✅ text at top, photo+name at bottom */
+  align-items: center;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  text-align: left;
+  flex-grow: 1; /* ✅ makes all texts take available space */
+}
+.review-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 15px;
+}
+
+.reviewer-name {
+  font-size: 16px;
+  margin: 5px 0 0;
+  color: #222;
+  text-align: center;
+}
+
+.stars {
+  color: #f4b400;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .reviews-section h2 {
+    font-size: 24px;
+  }
+  .review-card {
+    padding: 15px;
+  }
+  .review-text {
+    font-size: 13px;
+  }
+  .review-photo {
+    width: 50px;
+    height: 50px;
+  }
+}

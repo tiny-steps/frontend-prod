@@ -1,0 +1,148 @@
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 23px;
+  z-index: 1000;
+}
+
+.whatsapp-bubble {
+  display: flex;
+  align-items: center;
+  background-color: #f1f3f5;
+  border-radius: 30px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.bubble-text {
+  font-size: 17px;
+  color: #333;
+  margin-left: 25px;
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.bubble-icon {
+  background-color: #25d366;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bubble-whatsapp-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.close-bubble {
+  background-color: #25d366;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+}
+
+.whatsapp-popup {
+  width: 320px;
+  max-width: 90vw;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  margin-bottom: 10px;
+  font-family: "Segoe UI", sans-serif;
+  animation: fadeInUp 0.3s ease-in-out;
+}
+
+.popup-header {
+  display: flex;
+  align-items: flex-start;
+  background-color: #25d366;
+  padding: 12px;
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.popup-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+.popup-title h3 {
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.popup-title p {
+  margin: 4px 0;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #666;
+  display: block;
+  font-weight: 400;
+  padding: 10px 12px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f2f2f2;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-card:hover {
+  background: #e0e0e0;
+}
+
+.contact-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.contact-card span {
+  flex: 1;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.open-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 480px) {
+  .whatsapp-popup {
+    width: 90vw;
+  }
+
+  .popup-title h4 {
+    font-size: 20px;
+  }
+
+  .contact-card span {
+    font-size: 14px;
+  }
+}

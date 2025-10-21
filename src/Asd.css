@@ -1,0 +1,274 @@
+.asd-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.asd-left .asd-icon {
+  font-size: 2.5rem;
+}
+
+.asd-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #6c048f;
+}
+
+.asd-description {
+  font-size: 1rem;
+  color: #444;
+  max-width: 900px;
+}
+
+/* Asses Wrapper */
+.asses-wrapper {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.asses-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #b104af;
+}
+
+/* Asses Grid */
+.asses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+/* Card Style */
+
+.asses-card {
+  background-color: #dcaffd;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.asses-card:hover {
+  transform: translateY(-4px);
+}
+
+.asses-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d020f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.asses-icon {
+  font-size: 45px;
+  line-height: 1;
+  color: #d509c1;
+}
+
+.asses-text {
+  font-size: 0.9rem;
+  color: #1b0d0d;
+  margin: 0;
+  text-align: center;
+}
+
+.asses-grid .asses-card:last-child {
+  grid-column: span 2;
+}
+.asd-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #222;
+}
+
+.asd-section {
+  margin-bottom: 40px;
+}
+
+.asd-section h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #af06a1;
+}
+
+.asd-section ul {
+  padding-left: 0;
+}
+
+.asd-section ul li {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.asd-note {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #650235;
+  font-style: italic;
+}
+.asses-wrapper,
+.asd-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.check-list {
+  list-style: none;
+  padding: 0;
+}
+.check-list li {
+  margin-bottom: 10px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: rgb(94, 0, 128);
+  font-weight: bold;
+}
+.action-section {
+  background: #d59dfa;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.action-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.action-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #d911e0;
+  margin-bottom: 0.8rem;
+}
+
+.action-subtitle {
+  font-size: 1rem;
+  color: #8e0435;
+  margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.action-btn {
+  background: #860473;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #b724d1;
+  text-decoration: none;
+}
+
+.action-btn.secondary {
+  background: #9d0489;
+  text-decoration: none;
+}
+
+.action-btn.secondary:hover {
+  background: #d66bf7;
+}
+
+@media (max-width: 768px) {
+  .asses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .asses-grid .asses-card:last-child {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .asd-container {
+    padding: 15px;
+  }
+
+  .asd-section h2 {
+    font-size: 20px;
+  }
+
+  .asd-section ul li {
+    font-size: 15px;
+  }
+
+  .asd-note {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .asd-container {
+    padding: 10px;
+  }
+
+  .asd-section h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .asd-section ul li {
+    font-size: 14px;
+  }
+
+  .asd-note {
+    text-align: center;
+    font-size: 13px;
+  }
+}
+@media (max-width: 600px) {
+  .action-title {
+    font-size: 1.5rem;
+  }
+  .action-subtitle {
+    font-size: 0.95rem;
+  }
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .action-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
