@@ -1,5 +1,8 @@
 import React from "react";
 import "./Doctordetails.css";
+import fou from "./assets/fou.jpg";
+import therapist1 from "./assets/Therapist1.jpg";
+import dct2 from "./assets/dct2.jpg";
 import {
   FaUsers,
   FaHeart,
@@ -17,7 +20,7 @@ const experts = [
 
     description:
       "Expert in bobath, aqua therapy, gait training,motor training and swing therapy.",
-    image: "src/assets/fou.jpg",
+    image: fou,
     linkedin:
       "https://www.linkedin.com/in/harapriya-jali-55563b370?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
@@ -26,7 +29,7 @@ const experts = [
     title: "Physiotherapist",
     description:
       "Focused to improve movement, balance and overall child development.",
-    image: "src/assets/Therapist1.jpg",
+    image: therapist1,
     linkedin:
       "https://www.linkedin.com/in/dr-sweata-das-pt-22b0b61a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
   },
@@ -35,9 +38,9 @@ const experts = [
     title: " Occupational Therapist",
     description:
       " Expert in Sensory Integration therapy, Hand function skills training especially pre-writing and writing skills.",
-    image: "src/assets/dct2.jpg",
+    image: dct2,
     linkedin:
-      "https://www.linkedin.com/in/aradhana-nayak-0bb60245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "https://www.linkedin.com/in/dr-aradhana-nayak-ot-0bb60245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
 ];
 

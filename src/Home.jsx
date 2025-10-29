@@ -1,7 +1,7 @@
 import React from "react";
 
 import hom1 from "./assets/hom1.jpg";
-
+import laaaa from "./assets/laaaa.webp";
 import hom2 from "./assets/hom2.jpg";
 import "./Home.css";
 import { Link, useLocation } from "react-router-dom";
@@ -65,11 +65,7 @@ function Home() {
         {/* First Section */}
         <section className="homeabt-section homeabt-bg1">
           <div className="homeabt-image">
-            <img
-              className="laa"
-              src="src/assets/laaaa.webp"
-              alt="Child Therapy"
-            />
+            <img className="laa" src={laaaa} alt="Child Therapy" />
           </div>
           <div className="homeabt-text">
             <h4>ABOUT US</h4>
